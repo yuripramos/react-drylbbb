@@ -8,7 +8,7 @@ import ItemDescription from "./item_description.js";
 const AUTH_TOKEN = "20247ff2713d41fea7dd0ba106834d2ebf11f4b9f663c0eb405ae69976fcc4d3";
 
 axios.defaults.baseURL = 'https://api.dribbble.com/v1/';
-axios.defaults.headers.common['Authorization'] =`Bearer ${AUTH_TOKEN}`;
+axios.defaults.headers.common['Authorization'] =`Bearer ${AUTH_TOKEN}`; //New in ES6
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
 class Main extends React.Component {
@@ -26,17 +26,16 @@ class Main extends React.Component {
 			console.log("---------------");
         	this.setState({ items : res.data });
 
-        	console.log(this.state.items[0].images.teaser);
-
       	});
 		
     }
 	render(){
-	
 		return(
-			<div className="wrapper">
+			<div className="container">
+				<ItemDescription item = { this.state.selectedItem } />
 				<ItemList onItemSelect={selectedItem => this.setState({selectedItem}) }
-	      	items = {this.state.items}/>
+	      		items = {this.state.items}/>
+
 			</div>
 		);
 	}

@@ -7,9 +7,10 @@ const ItemList = (props) => {
 		onItemSelect = {props.onItemSelect}
 		key={item.id}
 		item={item} />
+		console.log(item.id);
 	});
 	return (
-		<ul className="col-md-4 list-group">
+		<ul className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			{Items}
 		</ul>
 	);

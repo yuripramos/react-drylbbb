@@ -3,11 +3,10 @@ import ItemDescription from "./item_description.js";
 
 
 const ItemListDetail = ({item, onItemSelect}) => {
-	//const video = props.video, use curly braces
 	const imageUrl = item.images.teaser;
 
 	return( 
-		<li onClick ={() => onItemSelect(item) } className="list-group-item">
+		<li onClick ={() => onItemSelect(item) } className="col-lg-4 col-md-4 col-sm-6 col-xs-12 list-group-item">
 			<div className="video-list media">
 				<div className="media-left">
 					<img className="media-object" src={imageUrl}/>
