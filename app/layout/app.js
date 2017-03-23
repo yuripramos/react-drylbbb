@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import ReactDOM from "react-dom";
-
 import axios from "axios";
+
+import ItemList from "./item_list.js";
+import ItemDescription from "./item_description.js";
 
 const AUTH_TOKEN = "20247ff2713d41fea7dd0ba106834d2ebf11f4b9f663c0eb405ae69976fcc4d3";
 
@@ -13,26 +15,28 @@ class Main extends React.Component {
     constructor(props){
     	super(props);
 	    this.state = {
-	      items: []
+	      items: [],
+	      selectedItem:null
 	    };
-    	this.showMenus = this.showMenus.bind(this);
     }
     componentWillMount(){
 	    axios.get("/shots?per_page=50")
 		.then(res => {
 			console.log(res.data);
+			console.log("---------------");
         	this.setState({ items : res.data });
+
+        	console.log(this.state.items[0].images.teaser);
+
       	});
 		
-    }
-    showMenus(){
-    	//<NavBar items = {this.state.items} />
     }
 	render(){
 	
 		return(
 			<div className="wrapper">
-				 
+				<ItemList onItemSelect={selectedItem => this.setState({selectedItem}) }
+	      	items = {this.state.items}/>
 			</div>
 		);
 	}
