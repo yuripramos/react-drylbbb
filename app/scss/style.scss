@@ -1,6 +1,61 @@
-
-
+body{
+  font-family: 'Roboto', sans-serif;
+  margin:0;
+  padding:0;
+  background:rgba(111, 120, 98, 0.44);
+}
+.list-group-item{
+  border:0;
+  .shot-list{
+    .media-body{
+      display: inline-block;
+      float: left;
+      .media-heading{
+        span.font-awesome{
+          color:rgba(111,114,119,0.8);
+          padding: 5px;
+        }
+      }
+    }
+  }
+}
 
 .selected-detail{
   padding:20px;
+
+  .media-avatar{
+    border-radius:90px;
+  }
+  .details{
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+    direction:ltr;
+
+  }
+}
+
+
+@media screen and (max-width:768px){
+  .list-group-item{
+  .shot-list{
+    .media-body{
+      .media-heading{
+        font-size:13px;
+        span.font-awesome{
+
+        }
+      }
+    }
+  }
+}
+
+.selected-detail{
+  padding:20px;
+
+  .media-avatar{
+    width: 80px;
+    height: 80px;
+  }
+}
+
 }
