@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from "react-dom";
 import axios from "axios";
-
+import Footer from "./footer.js";
 import ItemList from "./item_list.js";
 import ItemDescription from "./item_description.js";
 
@@ -31,11 +31,13 @@ class Main extends React.Component {
     }
 	render(){
 		return(
-			<div className="container">
-				<ItemDescription item = { this.state.selectedItem } />
-				<ItemList onItemSelect={selectedItem => this.setState({selectedItem}) }
-	      		items = {this.state.items}/>
-
+			<div>
+				<div className="container">
+					<ItemDescription item = { this.state.selectedItem } />
+					<ItemList onItemSelect={selectedItem => this.setState({selectedItem}) }
+		      		items = {this.state.items}/>
+				</div>
+				<Footer />
 			</div>
 		);
 	}
