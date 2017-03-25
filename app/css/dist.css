@@ -113,7 +113,13 @@ footer {
   .list-group-item .shot-list .media-body .media-heading {
     font-size: 14px; }
   .shot-list .media-right .media-object {
-    width: 100% !important; } }
+    width: 100% !important; }
+  .main-description .user-infos a {
+    width: 150px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; } }
 
 @media screen and (max-width: 1199px) and (min-width: 768px) {
   .selected-detail .details {

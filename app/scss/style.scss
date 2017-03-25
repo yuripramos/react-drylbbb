@@ -51,9 +51,9 @@ body{
       width: 320px;
       display: inline-block;
       color:#dddfff;
-        a{
-          color:#dddfff;
-          font-family: 'Roboto', sans-serif;
+      a{
+        color:#dddfff;
+        font-family: 'Roboto', sans-serif;
       }
       .font-awesome{
         padding:7px;
@@ -62,19 +62,19 @@ body{
   }
   .details{
     .wrapper{
-    height: 450px;
-        .item-desc-text{
-          position: relative;
-          transform: translateY(-300px);
-          left: 0px;
-          visibility: hidden;
-          height: 300px;
-          color: #777;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          transition: background 0.5s;
-          padding:15px;
-        }
+      height: 450px;
+      .item-desc-text{
+        position: relative;
+        transform: translateY(-300px);
+        left: 0px;
+        visibility: hidden;
+        height: 300px;
+        color: #777;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        transition: background 0.5s;
+        padding:15px;
+      }
     }
     &:hover .item-desc-text{
       visibility:visible;
@@ -113,43 +113,41 @@ footer{
 
 @media screen and (max-width:768px){
   .list-group-item{
-  .shot-list{
-    .media-right{
-      .media-object{
-        width: 150px;
-
-      }
-    }
-    .media-body{
-      .media-heading{
-        margin-right: 5px;
-        font-size:12px;
-        .attachments_numbers{
-          visibility: hidden;
+    .shot-list{
+      .media-right{
+        .media-object{
+          width: 150px;
         }
-        span.font-awesome:nth-last-child(2){
-          visibility: hidden;
+      }
+      .media-body{
+        .media-heading{
+          margin-right: 5px;
+          font-size:12px;
+          .attachments_numbers{
+            visibility: hidden;
+          }
+          span.font-awesome:nth-last-child(2){
+            visibility: hidden;
+          }
         }
       }
     }
   }
-}
 
-.selected-detail{
-  padding:20px;
-  .main-description{
-    height: auto;
-    width: 100%;
-    .media-avatar{
-      width: 100px;
-      height: 100px;
-    }
-    .user-infos{
-      margin-top: 15px;
+  .selected-detail{
+    padding:20px;
+    .main-description{
+      height: auto;
+      width: 100%;
+      .media-avatar{
+        width: 100px;
+        height: 100px;
+      }
+      .user-infos{
+        margin-top: 15px;
+      }
     }
   }
-
-}
 
 }
 
@@ -173,6 +171,18 @@ footer{
       .media-object{
         width: 100% !important;
 
+      }
+    }
+  }
+
+  .main-description{
+    .user-infos{
+      a{
+        width: 150px;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
     }
   }

@@ -26,6 +26,8 @@ http://pathologist-karl-50205.netlify.com/
 
 Know more about this amazing service called [**Netlify**](https://www.netlify.com/) that I use for deployment.
 
+Want to use Continuous Deployment in other repositories? [**Check the docs**](https://www.netlify.com/docs/continuous-deployment/).
+
 ## Roadmap
 
 **Release 0.0.1** (current) - First release of the app
@@ -36,6 +38,7 @@ Know more about this amazing service called [**Netlify**](https://www.netlify.co
 
 
 ## :v: Tests
+
 Still in development
 
 ## :exclamation: Credits
@@ -43,4 +46,5 @@ Still in development
 Yuri Ramos 
 
 ## :scroll: License
+
 MIT
