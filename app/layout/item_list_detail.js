@@ -11,9 +11,9 @@ const ItemListDetail = ({item, onItemSelect}) => {
 	const LikesCount = item.likes_count;
 
 	return( 
-		<li onClick ={() => onItemSelect(item) } className="col-lg-3 col-md-4 col-sm-4 col-xs-12 list-group-item">
+		<li onClick ={() => onItemSelect(item) } className="col-lg-3 col-md-4 col-sm-4 col-xs-6 col-xxs-12 list-group-item">
 			<div className="shot-list media">
-				<div className="media-left">
+				<div className="media-right">
 					<img className="media-object" src={ImageUrl}/>
 				</div>
 
@@ -38,7 +38,7 @@ const ItemListDetail = ({item, onItemSelect}) => {
 				        className='font-awesome'
 				        name='paperclip'
 				        style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}/> 
-				        {Attachments}
+				        <span className="attachments_numbers">{Attachments}</span>
 				    </div>
 				</div>
 			</div>

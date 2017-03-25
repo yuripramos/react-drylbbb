@@ -10,9 +10,11 @@ const ItemList = (props) => {
 		console.log(item.id);
 	});
 	return (
-		<ul className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			{Items}
-		</ul>
+		<div className="row">
+			<ul className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				{Items}
+			</ul>
+		</div>
 	);
 }
 

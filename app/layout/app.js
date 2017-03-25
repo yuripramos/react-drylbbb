@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from "react-dom";
 import axios from "axios";
+import GitHubForkRibbon from 'react-github-fork-ribbon';
 import Footer from "./footer.js";
 import ItemList from "./item_list.js";
 import ItemDescription from "./item_description.js";
@@ -11,6 +12,8 @@ axios.defaults.baseURL = 'https://api.dribbble.com/v1/';
 axios.defaults.headers.common['Authorization'] =`Bearer ${AUTH_TOKEN}`; //New in ES6
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
+
+
 class Main extends React.Component {
     constructor(props){
     	super(props);
@@ -20,24 +23,32 @@ class Main extends React.Component {
 	    };
     }
     componentWillMount(){
-	    axios.get("/shots?per_page=50")
+	    axios.get("/shots?per_page=52")
 		.then(res => {
 			console.log(res.data);
 			console.log("---------------");
         	this.setState({ items : res.data });
-
       	});
 		
     }
+  	componentWillUpdate(){
+		window.scrollTo(50, 50);
+  	}
 	render(){
 		return(
 			<div>
 				<div className="container">
 					<ItemDescription item = { this.state.selectedItem } />
-					<ItemList onItemSelect={selectedItem => this.setState({selectedItem}) }
+					<ItemList onItemSelect={selectedItem => this.setState({selectedItem})  }
 		      		items = {this.state.items}/>
 				</div>
 				<Footer />
+		     	<GitHubForkRibbon position="right" 
+                color="red"
+                href="//github.com/yuripramos/react-drylbbb" 
+                target="_blank" > 
+					Fork me on GitHub 
+				</GitHubForkRibbon> 
 			</div>
 		);
 	}

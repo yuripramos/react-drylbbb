@@ -3,8 +3,15 @@ import FontAwesome from 'react-fontawesome';
 
 const ItemDescription = ({item}) => {
 	if(!item){
-		return <div>Loading...</div>;
+		return (
+			<div className="container provisory-header">
+				<h1>Drylbbb</h1>
+				<h3> A Tiny Dribbble made in react </h3>
+				<h5> Click in any of the images below to see the details </h5>
+			</div>
+		);
 	}
+
 	const ItemId = item.id;	
 	const UserImage = item.user.avatar_url;
 	const UserName = item.user.name;
@@ -22,8 +29,8 @@ const ItemDescription = ({item}) => {
 
 	return (
 		<div className="container">
-			<div className="selected-detail col-md-12 col-md-12 col-sm-12 col-xs-12 text-center">
-				<div className="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2 col-sm-offset-1 col-sm-2 col-xs-12">
+			<div className="selected-detail col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div className="col-lg-offset-1 col-lg-2 col-md-3 col-sm-12 col-xs-12">
 					<div className="main-description ">
 						<img className="media-avatar" src={UserImage}/> 
 							<div className="user-infos">
@@ -55,7 +62,7 @@ const ItemDescription = ({item}) => {
 							</div>
 					</div>
 				</div>
-				<div className="details col-lg-offset-3 col-lg-5 col-md-offset-2 col-md-4 col-lg-offset-2 col-sm-4 col-xs-12">
+				<div className="details col-lg-offset-3 col-lg-5 col-md-offset-2 col-md-4 col-lg-offset-2 hidden-sm-down">
 					<div className="wrapper">
 						<img className="media-object" src={item.images.normal}/>
 						<p dangerouslySetInnerHTML={{__html: ItemDesc}} className="item-desc-text" />
