@@ -19,8 +19,6 @@ class Main extends React.Component {
     componentWillMount(){
 	    axios.get("/shots?per_page=52")
 		.then(res => {
-			console.log(res.data);
-			console.log("---------------");
         	this.setState({ items : res.data });
       	});
 		
